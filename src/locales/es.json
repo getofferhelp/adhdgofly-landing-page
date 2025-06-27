@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "title": "ADHD GO FLY - Herramienta de Lectura y Edición Multilingüe",
+    "description": "Una herramienta de lectura y edición multilingüe diseñada para personas con TDAH, con segmentación inteligente de palabras, asistencia de IA y modo de concentración."
+  },
+  "backToTop": "Volver arriba",
+  "hero": {
+    "titleADHD": "ADHD ",
+    "titleGoFly": "GO FLY",
+    "titleLine2": "Haz que leer y escribir sea más fácil",
+    "subtitle": "Una herramienta multilingüe de lectura y edición diseñada para personas con TDAH",
+    "tryWeb": "Prueba la versión web",
+    "download": "Descarga la aplicación"
+  },
+  "features": {
+    "title": "Características Principales",
+    "editor": {
+      "title": "Editor Inteligente",
+      "desc": "Segmentación en tiempo real, soporte multilingüe, experiencia de escritura enfocada"
+    },
+    "ai": {
+      "title": "Procesamiento IA de Texto",
+      "desc": "Análisis inteligente, generación de resúmenes, traducción multilingüe"
+    },
+    "focus": {
+      "title": "Asistente de Concentración",
+      "desc": "Guardado automático, sugerencias inteligentes, reducción de distracciones"
+    },
+    "adhd": {
+      "title": "Diseño amigable para TDAH",
+      "desc": "Modo de enfoque, experiencia de lectura personalizable, menos distracciones"
+    },
+    "language": {
+      "title": "Soporte multilingüe",
+      "desc": "Compatible con chino, inglés, francés, español, ruso y japonés"
+    },
+    "platform": {
+      "title": "Multiplataforma",
+      "desc": "Acceso web, disponible para macOS y Windows"
+    }
+  },
+  "download": {
+    "title": "Descargar",
+    "mac": "Descargar para macOS",
+    "windows": "Descargar para Windows",
+    "macTipsTitle": "¿No puedes abrir la aplicación?",
+    "macTip1": "Después de descargar, mantén presionada la tecla Control (⌃) y haz clic en la aplicación",
+    "macTip2": "Selecciona \"Abrir\" en el menú",
+    "macTip3": "Haz clic en \"Abrir\" nuevamente en el diálogo de confirmación",
+    "winTipsTitle": "¿No puedes abrir la aplicación?",
+    "winTip1": "Haz clic en \"Más información\"",
+    "winTip2": "Haz clic en \"Ejecutar de todos modos\""
+  },
+  "testimonials": {
+    "title": "Opiniones de Usuarios",
+    "review1": "Como creador con TDAH, esta herramienta me ayuda a mantener el enfoque. La segmentación en tiempo real del editor inteligente hace que mi proceso de escritura sea más fluido, y las funciones de IA son realmente prácticas.",
+    "review2": "Me encanta la filosofía de diseño de este editor. La interfaz es limpia y no distrae, mientras que las funciones de IA proporcionan ayuda cuando se necesita.",
+    "review3": "Como escritor freelance, necesito una herramienta que me ayude a mantener la concentración. Este software satisface perfectamente mis necesidades, especialmente sus funciones de asistencia para el enfoque."
+  }
+} 

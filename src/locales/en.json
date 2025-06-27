@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "titleADHD": "ADHD ",
+    "titleGoFly": "GO FLY",
+    "titleLine2": "Make Reading and Writing Easier",
+    "subtitle": "A multilingual reading and editing tool tailored for ADHD individuals",
+    "tryWeb": "Try Web Version",
+    "download": "Download Desktop App"
+  },
+  "features": {
+    "title": "Key Features",
+    "editor": {
+      "title": "Smart Editor",
+      "desc": "Real-time word segmentation, multi-language support, focused writing experience"
+    },
+    "ai": {
+      "title": "AI Text Processing",
+      "desc": "Smart text analysis, summary generation, multi-language translation"
+    },
+    "focus": {
+      "title": "Focus Assistant",
+      "desc": "Auto-save, smart suggestions, distraction reduction"
+    },
+    "adhd": {
+      "title": "ADHD-Friendly Design",
+      "desc": "Focus mode, customizable reading experience, reduced distractions"
+    },
+    "language": {
+      "title": "Multi-language Support",
+      "desc": "Supports Chinese, English, French, Spanish, Russian, and Japanese"
+    },
+    "platform": {
+      "title": "Cross-platform",
+      "desc": "Access via web, available for macOS and Windows"
+    }
+  },
+  "download": {
+    "title": "Download",
+    "mac": "Download for macOS",
+    "windows": "Download for Windows",
+    "macTipsTitle": "Can't open the app?",
+    "macTip1": "After downloading, hold the Control key (⌃) and click the app",
+    "macTip2": "Select \"Open\" from the menu",
+    "macTip3": "Click \"Open\" again in the confirmation dialog",
+    "winTipsTitle": "Can't open the app?",
+    "winTip1": "Click \"More info\"",
+    "winTip2": "Click \"Run anyway\""
+  },
+  "testimonials": {
+    "title": "User Reviews",
+    "review1": "As an ADHD creator, this tool helps me stay focused. The <a href=\"https://adhdgofly.online/docs/features/smart-editor\" target=\"_blank\">smart editor's</a> real-time word segmentation makes my writing process smoother, and the AI features are really practical.",
+    "review2": "I love the design philosophy of this editor. The interface is clean and doesn't distract, while the <a href=\"https://adhdgofly.online/docs/features/ai-features\" target=\"_blank\">AI features</a> provide help when needed.",
+    "review3": "As a freelance writer, I need a tool that helps me maintain focus. This software perfectly meets my needs, especially its <a href=\"https://adhdgofly.online/docs/features/focus-mode\" target=\"_blank\">focus assistance features</a>.",
+    "review4": "I share a lot of ADHD-related experiences on <a href=\"https://www.xiaohongshu.com/user/profile/12345678\" target=\"_blank\">Xiaohongshu</a>. This software really solves our writing pain points. Try it out! Check my pinned post for detailed experience 👉",
+    "review5": "Real feedback after one month of use: The <a href=\"https://adhdgofly.online/docs/features/ai-analysis\" target=\"_blank\">AI features</a> have helped me optimize many articles, especially in organizing thoughts. Here's a screenshot showing how intelligent the text analysis is."
+  },
+  "meta": {
+    "title": "ADHD GO FLY - Multilingual Reading & Editing Tool",
+    "description": "A multilingual reading and editing tool designed for ADHD individuals, featuring smart word segmentation, AI assistance, and focus mode."
+  },
+  "backToTop": "Back to Top"
+} 

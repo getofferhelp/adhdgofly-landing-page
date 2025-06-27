@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "title": "ADHD GO FLY - 多语言阅读编辑工具",
+    "description": "为ADHD群体量身打造的多语言阅读编辑工具，提供智能分词、AI辅助、专注模式等功能。"
+  },
+  "backToTop": "返回顶部",
+  "hero": {
+    "titleADHD": "ADHD ",
+    "titleGoFly": "GO FLY",
+    "titleLine2": "让阅读和写作更轻松自在",
+    "subtitle": "为ADHD群体量身打造的多语言阅读编辑工具",
+    "tryWeb": "立即体验网页版",
+    "download": "下载桌面应用"
+  },
+  "features": {
+    "title": "主要功能",
+    "editor": {
+      "title": "智能编辑器",
+      "desc": "实时智能分词，多语言支持，专注写作体验"
+    },
+    "ai": {
+      "title": "AI文本处理",
+      "desc": "智能分析文本，生成摘要，多语言翻译"
+    },
+    "focus": {
+      "title": "专注辅助",
+      "desc": "自动保存，智能提示，减少干扰"
+    },
+    "adhd": {
+      "title": "ADHD友好设计",
+      "desc": "专注模式、自定义阅读体验、减少干扰元素"
+    },
+    "language": {
+      "title": "多语言支持",
+      "desc": "支持中文、英语、法语、西班牙语、俄语、日语"
+    },
+    "platform": {
+      "title": "跨平台可用",
+      "desc": "网页版随时访问，支持macOS和Windows系统"
+    }
+  },
+  "download": {
+    "title": "下载",
+    "mac": "下载 macOS 版本",
+    "windows": "下载 Windows 版本",
+    "macTipsTitle": "无法打开软件？",
+    "macTip1": "下载完成后，按住 Control 键(⌃)并点击应用",
+    "macTip2": "在弹出菜单中选择\"打开\"",
+    "macTip3": "在确认对话框中再次点击\"打开\"",
+    "winTipsTitle": "无法打开软件？",
+    "winTip1": "点击\"更多信息\"",
+    "winTip2": "点击\"仍要运行\""
+  },
+  "testimonials": {
+    "title": "用户评价",
+    "review1": "作为一个ADHD创作者，这个工具帮我保持专注。<a href=\"https://adhdgofly.online/docs/features/smart-editor\" target=\"_blank\">智能编辑器</a>的实时分词让我的写作流程更顺畅，AI功能也很实用。",
+    "review2": "非常喜欢这个编辑器的设计理念。界面简洁不会分散注意力，同时<a href=\"https://adhdgofly.online/docs/features/ai-features\" target=\"_blank\">AI功能</a>又能在需要的时候提供帮助。",
+    "review3": "作为自由撰稿人，我需要一个能让我保持专注的工具。这个软件完美满足了我的需求，特别是它的<a href=\"https://adhdgofly.online/docs/features/focus-mode\" target=\"_blank\">专注辅助功能</a>。",
+    "review4": "我在<a href=\"https://www.xiaohongshu.com/user/profile/12345678\" target=\"_blank\">小红书</a>上分享了很多ADHD相关的经验，这款软件真的解决了我们写作时的痛点。推荐大家试试看！详细使用体验可以看我主页置顶笔记 👉",
+    "review5": "使用一个月后的真实反馈：<a href=\"https://adhdgofly.online/docs/features/ai-analysis\" target=\"_blank\">AI功能</a>帮我优化了很多文章，特别是在整理思路方面。附上一张效果截图，你们可以看到文本分析有多智能。"
+  }
+} 
