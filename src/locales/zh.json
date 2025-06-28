@@ -57,9 +57,10 @@
       "forIntelMac": "适用于 Intel 芯片的 Mac",
       "viewMoreDetails": "查看更多下载详情",
       "downloadStarting": "下载即将开始...",
-      "recommended": "推荐",
       "detectedSystem": "检测到您的系统",
-      "otherVersions": "其他版本"
+      "otherVersions": "其他版本",
+      "detectedInfo": "检测到当前使用的是 {chip} ，已为您推荐对应版本",
+      "recommended": "推荐版本"
     
   },
   "testimonials": {

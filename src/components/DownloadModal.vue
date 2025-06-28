@@ -18,18 +18,34 @@
           </button>
         </div>
 
+        <!-- 检测提示 -->
+        <div v-if="detectedArch" class="mb-4 p-3 bg-blue-50 dark:bg-blue-900/30 rounded-lg text-sm">
+          <p class="text-blue-700 dark:text-blue-300">
+            {{ $t('download.detectedInfo', { 
+              chip: detectedArch === 'arm64' ? 'Apple Silicon' : 'Intel' 
+            }) }}
+          </p>
+        </div>
+
         <div class="space-y-4">
           <!-- Apple Silicon 版本 -->
           <div class="download-option">
             <button @click="download('arm64')" 
-                    class="w-full btn-download flex items-center justify-between p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
-                    :class="{ 'ring-2 ring-nva-noun': detectedArch === 'arm64' }">
+                    class="w-full btn-download flex items-center justify-between p-4 border rounded-lg"
+                    :class="[
+                      detectedArch === 'arm64' 
+                        ? 'border-nva-noun bg-nva-noun-bg dark:bg-blue-900/30 border-2' 
+                        : 'border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700'
+                    ]">
               <div class="text-left">
                 <div class="font-semibold dark:text-white flex items-center">
                   {{ $t('download.macM1') }}
                   <span v-if="detectedArch === 'arm64'" 
-                        class="ml-2 text-sm text-nva-noun dark:text-blue-400">
-                    ({{ $t('download.recommended') }})
+                        class="ml-2 text-sm text-nva-noun dark:text-blue-400 flex items-center">
+                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    {{ $t('download.recommended') }}
                   </span>
                 </div>
                 <div class="text-sm text-gray-500 dark:text-gray-400">
@@ -45,14 +61,21 @@
           <!-- Intel 版本 -->
           <div class="download-option">
             <button @click="download('x64')" 
-                    class="w-full btn-download flex items-center justify-between p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
-                    :class="{ 'ring-2 ring-nva-noun': detectedArch === 'x64' }">
+                    class="w-full btn-download flex items-center justify-between p-4 border rounded-lg"
+                    :class="[
+                      detectedArch === 'x64' 
+                        ? 'border-nva-noun bg-nva-noun-bg dark:bg-blue-900/30 border-2' 
+                        : 'border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700'
+                    ]">
               <div class="text-left">
                 <div class="font-semibold dark:text-white flex items-center">
                   {{ $t('download.macIntel') }}
                   <span v-if="detectedArch === 'x64'" 
-                        class="ml-2 text-sm text-nva-noun dark:text-blue-400">
-                    ({{ $t('download.recommended') }})
+                        class="ml-2 text-sm text-nva-noun dark:text-blue-400 flex items-center">
+                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    {{ $t('download.recommended') }}
                   </span>
                 </div>
                 <div class="text-sm text-gray-500 dark:text-gray-400">
