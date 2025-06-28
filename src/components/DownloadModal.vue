@@ -128,10 +128,10 @@ const download = (arch: 'arm64' | 'x64') => {
 
 <style scoped>
 .btn-download {
-  @apply transition-all duration-200;
+  transition: all 0.2s;
 }
 
 .btn-download:hover {
-  @apply transform -translate-y-0.5;
+  transform: translateY(-2px);
 }
 </style>
