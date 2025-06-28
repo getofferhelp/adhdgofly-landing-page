@@ -390,10 +390,13 @@ const handleDownload = (arch: 'arm64' | 'x64') => {
     // 创建一个隐藏的 a 标签来触发下载
     const link = document.createElement('a')
     link.href = downloadUrl
-    link.download = downloadUrl.split('/').pop() // 获取文件名
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
+    const fileName = downloadUrl.split('/').pop()
+    if (fileName) {
+      link.download = fileName
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+    }
   } else {
     console.error('Download link not found')
   }

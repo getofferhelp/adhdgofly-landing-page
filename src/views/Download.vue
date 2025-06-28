@@ -153,6 +153,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import DownloadModal from '@/components/DownloadModal.vue'
+import { trackEvent } from '@/utils/analytics'
 
 const showDownloadModal = ref(false)
 
@@ -169,16 +170,17 @@ const downloadWindows = () => {
   const version = '1.0.0'
   const downloadUrl = `https://github.com/your-repo/releases/download/v${version}/adhdgofly-win-x64-${version}.exe`
   
-  // 追踪下载事件
   trackEvent('download_windows')
   
-  // 触发下载
   const link = document.createElement('a')
   link.href = downloadUrl
-  link.download = downloadUrl.split('/').pop()
-  document.body.appendChild(link)
-  link.click()
-  document.body.removeChild(link)
+  const fileName = downloadUrl.split('/').pop()
+  if (fileName) {
+    link.download = fileName
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
 }
 </script>
 
