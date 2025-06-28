@@ -19,76 +19,31 @@
           </div>
         </div>
 
-        <!-- Windows 下载选项 -->
-        <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg mb-8">
-          <h2 class="text-2xl font-semibold mb-4 dark:text-white">Windows</h2>
-          <div class="space-y-4">
-            <button @click="downloadWindows" 
-                    class="w-full btn-primary p-4 text-center flex items-center justify-center">
-              <span>{{ $t('downloadPage.downloadWindows') }}</span>
-              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-              </svg>
-            </button>
-            <p class="text-sm text-gray-500 dark:text-gray-400 text-center">
-              {{ $t('downloadPage.windowsVersion') }}
-            </p>
-          </div>
-        </div>
-
         <!-- 系统要求 -->
         <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg mb-8">
           <h2 class="text-2xl font-semibold mb-4 dark:text-white">
             {{ $t('downloadPage.systemRequirements') }}
           </h2>
-          <!-- macOS 要求 -->
-          <div class="mb-6">
-            <h3 class="text-lg font-semibold mb-3 text-gray-700 dark:text-gray-300">macOS</h3>
-            <ul class="space-y-3 text-gray-600 dark:text-gray-300">
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <span>macOS 11.0 (Big Sur) 或更高版本</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <span>4GB RAM 以上内存</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <span>500MB 可用磁盘空间</span>
-              </li>
-            </ul>
-          </div>
-          <!-- Windows 要求 -->
-          <div>
-            <h3 class="text-lg font-semibold mb-3 text-gray-700 dark:text-gray-300">Windows</h3>
-            <ul class="space-y-3 text-gray-600 dark:text-gray-300">
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <span>Windows 10 64位 或 Windows 11</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <span>4GB RAM 以上内存</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <span>500MB 可用磁盘空间</span>
-              </li>
-            </ul>
-          </div>
+          <ul class="space-y-3 text-gray-600 dark:text-gray-300">
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span>macOS 11.0 (Big Sur) 或更高版本</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span>4GB RAM 以上内存</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="w-5 h-5 text-green-500 mr-2 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span>500MB 可用磁盘空间</span>
+            </li>
+          </ul>
         </div>
 
         <!-- 安装指南 -->
@@ -163,22 +118,6 @@ const handleDownload = (arch: 'arm64' | 'x64') => {
   
   window.location.href = url
   showDownloadModal.value = false
-}
-
-const downloadWindows = () => {
-  const version = '1.0.0'
-  const downloadUrl = `https://github.com/your-repo/releases/download/v${version}/adhdgofly-win-x64-${version}.exe`
-  
-  // 追踪下载事件
-  trackEvent('download_windows')
-  
-  // 触发下载
-  const link = document.createElement('a')
-  link.href = downloadUrl
-  link.download = downloadUrl.split('/').pop()
-  document.body.appendChild(link)
-  link.click()
-  document.body.removeChild(link)
 }
 </script>
 
