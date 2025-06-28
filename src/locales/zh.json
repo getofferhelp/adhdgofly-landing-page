@@ -56,7 +56,10 @@
       "forAppleSilicon": "适用于 M1/M2/M3 芯片的 Mac",
       "forIntelMac": "适用于 Intel 芯片的 Mac",
       "viewMoreDetails": "查看更多下载详情",
-      "downloadStarting": "下载即将开始..."
+      "downloadStarting": "下载即将开始...",
+      "recommended": "推荐",
+      "detectedSystem": "检测到您的系统",
+      "otherVersions": "其他版本"
     
   },
   "testimonials": {

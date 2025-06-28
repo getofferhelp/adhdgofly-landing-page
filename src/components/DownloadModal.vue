@@ -22,9 +22,16 @@
           <!-- Apple Silicon 版本 -->
           <div class="download-option">
             <button @click="download('arm64')" 
-                    class="w-full btn-download flex items-center justify-between p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+                    class="w-full btn-download flex items-center justify-between p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
+                    :class="{ 'ring-2 ring-nva-noun': detectedArch === 'arm64' }">
               <div class="text-left">
-                <div class="font-semibold dark:text-white">{{ $t('download.macM1') }}</div>
+                <div class="font-semibold dark:text-white flex items-center">
+                  {{ $t('download.macM1') }}
+                  <span v-if="detectedArch === 'arm64'" 
+                        class="ml-2 text-sm text-nva-noun dark:text-blue-400">
+                    ({{ $t('download.recommended') }})
+                  </span>
+                </div>
                 <div class="text-sm text-gray-500 dark:text-gray-400">
                   {{ $t('download.forAppleSilicon') }}
                 </div>
@@ -38,9 +45,16 @@
           <!-- Intel 版本 -->
           <div class="download-option">
             <button @click="download('x64')" 
-                    class="w-full btn-download flex items-center justify-between p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700">
+                    class="w-full btn-download flex items-center justify-between p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
+                    :class="{ 'ring-2 ring-nva-noun': detectedArch === 'x64' }">
               <div class="text-left">
-                <div class="font-semibold dark:text-white">{{ $t('download.macIntel') }}</div>
+                <div class="font-semibold dark:text-white flex items-center">
+                  {{ $t('download.macIntel') }}
+                  <span v-if="detectedArch === 'x64'" 
+                        class="ml-2 text-sm text-nva-noun dark:text-blue-400">
+                    ({{ $t('download.recommended') }})
+                  </span>
+                </div>
                 <div class="text-sm text-gray-500 dark:text-gray-400">
                   {{ $t('download.forIntelMac') }}
                 </div>
@@ -64,7 +78,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, defineEmits } from 'vue'
+import { defineProps, defineEmits, ref, onMounted } from 'vue'
 
 const props = defineProps<{
   show: boolean
@@ -74,6 +88,30 @@ const emit = defineEmits<{
   (e: 'close'): void
   (e: 'download', arch: 'arm64' | 'x64'): void
 }>()
+
+const detectedArch = ref<'arm64' | 'x64' | null>(null)
+
+// 检测系统架构
+const detectArchitecture = () => {
+  // 检测是否为 Mac 设备
+  const isMac = navigator.platform.toLowerCase().includes('mac')
+  
+  if (!isMac) {
+    return null
+  }
+
+  // 检测 Apple Silicon
+  const isAppleSilicon = /Mac/.test(navigator.userAgent) && 
+                        /Apple/.test(navigator.userAgent) &&
+                        // macOS 11.0 Big Sur 或更高版本
+                        /Mac OS X 10|Mac OS X 11|Mac OS X 12|Mac OS X 13|Mac OS X 14/.test(navigator.userAgent)
+
+  return isAppleSilicon ? 'arm64' : 'x64'
+}
+
+onMounted(() => {
+  detectedArch.value = detectArchitecture()
+})
 
 const close = () => {
   emit('close')
@@ -87,3 +125,13 @@ const download = (arch: 'arm64' | 'x64') => {
   emit('download', arch)
 }
 </script>
+
+<style scoped>
+.btn-download {
+  @apply transition-all duration-200;
+}
+
+.btn-download:hover {
+  @apply transform -translate-y-0.5;
+}
+</style>
