@@ -192,21 +192,12 @@
         <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 md:mb-12 text-nva-adj">{{ $t('download.title') }}</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 max-w-4xl mx-auto">
-          <div class="download-card transform hover:scale-105 transition-transform focus-within:ring-4 focus-within:ring-nva-adj/50" tabindex="0">
+          <div class="download-card">
             <h3 class="text-xl font-semibold mb-4 dark:text-white">macOS</h3>
-            <a href="#" target="_blank" rel="noopener noreferrer"
-               class="btn-download focus:outline-none focus:ring-4 focus:ring-nva-adj/50"
-               @click="trackEvent('download_mac')">
+            <button @click="showDownloadModal = true" 
+                    class="btn-download focus:outline-none focus:ring-4 focus:ring-nva-adj/50">
               {{ $t('download.mac') }}
-            </a>
-            <div class="install-tips mt-4 text-sm text-gray-600 dark:text-gray-300">
-              <p class="font-medium mb-2">{{ $t('download.macTipsTitle') }}</p>
-              <ol class="list-decimal list-inside space-y-1 text-left">
-                <li>{{ $t('download.macTip1') }}</li>
-                <li>{{ $t('download.macTip2') }}</li>
-                <li>{{ $t('download.macTip3') }}</li>
-              </ol>
-            </div>
+            </button>
           </div>
 
           <div class="download-card transform hover:scale-105 transition-transform focus-within:ring-4 focus-within:ring-nva-adj/50" tabindex="0">
@@ -226,6 +217,13 @@
           </div>
         </div>
       </div>
+
+      <!-- 引入下载 Modal -->
+      <DownloadModal 
+        :show="showDownloadModal"
+        @close="showDownloadModal = false"
+        @download="handleDownload"
+      />
     </section>
 
     <!-- Back to Top Button -->
@@ -243,12 +241,14 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
 import { ref, onMounted, computed, onUnmounted } from 'vue'
+import DownloadModal from '@/components/DownloadModal.vue'
 
 const { t, locale } = useI18n()
 const isDark = ref(false)
 const windowWidth = ref(1920)
 const isLoading = ref(true)
 const showBackToTop = ref(false)
+const showDownloadModal = ref(false)
 
 // 响应式背景图片选择
 const heroBackgroundSrc = computed(() => {
@@ -365,6 +365,22 @@ const toggleDark = () => {
     document.body.style.setProperty('--page-background', '#ffffff')
   }
   localStorage.setItem('theme', isDark.value ? 'dark' : 'light')
+}
+
+const handleDownload = (arch: 'arm64' | 'x64') => {
+  // 实现下载逻辑
+  const url = arch === 'arm64' 
+    ? '/downloads/adhdgofly-arm64.dmg'
+    : '/downloads/adhdgofly-x64.dmg'
+  
+  // 追踪下载事件
+  trackEvent(`download_mac_${arch}`)
+  
+  // 开始下载
+  window.location.href = url
+  
+  // 关闭 Modal
+  showDownloadModal.value = false
 }
 
 onMounted(() => {
