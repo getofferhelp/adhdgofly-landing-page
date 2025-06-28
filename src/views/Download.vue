@@ -11,7 +11,6 @@
         <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg mb-8">
           <h2 class="text-2xl font-semibold mb-4 dark:text-white">macOS</h2>
           <div class="space-y-4">
-            <DownloadModal :show="showDownloadModal" @close="showDownloadModal = false" @download="handleDownload" />
             <button @click="showDownloadModal = true" 
                     class="w-full btn-primary p-4 text-center">
               {{ $t('downloadPage.downloadNow') }}
@@ -24,15 +23,9 @@
           <h2 class="text-2xl font-semibold mb-4 dark:text-white">Windows</h2>
           <div class="space-y-4">
             <button @click="downloadWindows" 
-                    class="w-full btn-primary p-4 text-center flex items-center justify-center">
-              <span>{{ $t('downloadPage.downloadWindows') }}</span>
-              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-              </svg>
+                    class="w-full btn-primary p-4 text-center">
+              {{ $t('downloadPage.downloadWindows') }}
             </button>
-            <p class="text-sm text-gray-500 dark:text-gray-400 text-center">
-              {{ $t('downloadPage.windowsVersion') }}
-            </p>
           </div>
         </div>
 
@@ -146,6 +139,13 @@
           </div>
         </div>
       </div>
+
+      <!-- 下载弹窗 -->
+      <DownloadModal 
+        :show="showDownloadModal"
+        @close="showDownloadModal = false"
+        @download="handleDownload"
+      />
     </div>
   </div>
 </template>
@@ -153,24 +153,34 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import DownloadModal from '@/components/DownloadModal.vue'
-import { trackEvent } from '@/utils/analytics'
+import { trackDownload } from '@/utils/analytics'
 
 const showDownloadModal = ref(false)
+const version = '1.0.0' // 当前版本号
 
 const handleDownload = (arch: 'arm64' | 'x64') => {
-  const url = arch === 'arm64' 
-    ? '/downloads/adhdgofly-arm64.dmg'
-    : '/downloads/adhdgofly-x64.dmg'
+  const downloadLinks = {
+    arm64: `https://download.adhdgofly.com/v${version}/adhdgofly-mac-arm64-${version}.dmg`,
+    x64: `https://download.adhdgofly.com/v${version}/adhdgofly-mac-x64-${version}.dmg`
+  }
+
+  const downloadUrl = downloadLinks[arch]
+  trackDownload(arch === 'arm64' ? 'mac_arm64' : 'mac_x64', version)
   
-  window.location.href = url
-  showDownloadModal.value = false
+  const link = document.createElement('a')
+  link.href = downloadUrl
+  const fileName = downloadUrl.split('/').pop()
+  if (fileName) {
+    link.download = fileName
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
 }
 
 const downloadWindows = () => {
-  const version = '1.0.0'
-  const downloadUrl = `https://github.com/your-repo/releases/download/v${version}/adhdgofly-win-x64-${version}.exe`
-  
-  trackEvent('download_windows')
+  const downloadUrl = `https://download.adhdgofly.com/v${version}/adhdgofly-win-x64-${version}.exe`
+  trackDownload('windows', version)
   
   const link = document.createElement('a')
   link.href = downloadUrl

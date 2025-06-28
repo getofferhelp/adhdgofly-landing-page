@@ -15,7 +15,6 @@ interface EventProperties {
     },
     NAVIGATION: {
       PAGE_VIEW: 'page_view',
-      SCROLL: 'scroll',
     },
     INTERACTION: {
       DARK_MODE: 'toggle_dark_mode',
@@ -31,24 +30,12 @@ interface EventProperties {
     // 开发环境下打印日志
     if (import.meta.env.DEV) {
       console.log('Event tracked:', eventName, properties)
+      return
     }
   
-    // Google Analytics
-    if (window.gtag) {
-      window.gtag('event', eventName, {
-        ...properties,
-        send_to: import.meta.env.VITE_GA_MEASUREMENT_ID
-      })
-    }
-  
-    // 百度统计
-    if (window._hmt) {
-      window._hmt.push(['_trackEvent', 
-        properties.category || 'General',
-        eventName,
-        properties.label || '',
-        properties.value || 1
-      ])
+    // Cloudflare Analytics
+    if (window.cfAnalytics) {
+      window.cfAnalytics.trackEvent(eventName, properties)
     }
   }
   
