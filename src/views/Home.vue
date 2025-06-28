@@ -368,19 +368,35 @@ const toggleDark = () => {
 }
 
 const handleDownload = (arch: 'arm64' | 'x64') => {
-  // 实现下载逻辑
-  const url = arch === 'arm64' 
-    ? '/downloads/adhdgofly-arm64.dmg'
-    : '/downloads/adhdgofly-x64.dmg'
-  
   // 追踪下载事件
   trackEvent(`download_mac_${arch}`)
   
-  // 开始下载
-  window.location.href = url
+  // 实际的下载链接
+  const version = '1.0.0' // 当前版本号
+  const downloadLinks = {
+    mac: {
+      arm64: `https://github.com/your-repo/releases/download/v${version}/adhdgofly-mac-arm64-${version}.dmg`,
+      x64: `https://github.com/your-repo/releases/download/v${version}/adhdgofly-mac-x64-${version}.dmg`
+    },
+    windows: {
+      x64: `https://github.com/your-repo/releases/download/v${version}/adhdgofly-win-x64-${version}.exe`
+    }
+  }
+
+  // 获取对应的下载链接
+  const downloadUrl = downloadLinks.mac[arch]
   
-  // 关闭 Modal
-  showDownloadModal.value = false
+  if (downloadUrl) {
+    // 创建一个隐藏的 a 标签来触发下载
+    const link = document.createElement('a')
+    link.href = downloadUrl
+    link.download = downloadUrl.split('/').pop() // 获取文件名
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  } else {
+    console.error('Download link not found')
+  }
 }
 
 onMounted(() => {

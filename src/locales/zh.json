@@ -9,14 +9,21 @@
     "requirements": {
       "os": "macOS 11.0 (Big Sur) 或更高版本",
       "ram": "4GB RAM 以上内存",
-      "disk": "500MB 可用磁盘空间"
+      "disk": "500MB 可用磁盘空间",
+      "windows": {
+        "os": "Windows 10 64位 或 Windows 11",
+        "ram": "4GB RAM 以上内存",
+        "disk": "500MB 可用磁盘空间"
+      }
     },
     "installation": {
       "step1": "下载对应您 Mac 芯片类型的安装包（.dmg 文件）",
       "step2": "双击下载的 .dmg 文件打开安装镜像",
       "step3": "将 ADHD GO FLY 应用程序拖拽到应用程序文件夹",
       "step4": "首次运行时，按住 Control 键点击应用图标并选择 '打开' "
-    }
+    },
+    "downloadWindows": "下载 Windows 版本",
+    "windowsVersion": "64位系统适用"
   },
   "meta": {
     "title": "ADHD GO FLY - 多语言阅读编辑工具",
