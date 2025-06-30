@@ -229,6 +229,7 @@
     <section id="download" class="download py-4 md:py-12 bg-gray-50 dark:bg-gray-800/80">
       <div class="container mx-auto px-4">
         <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 md:mb-12 text-nva-adj">{{ $t('download.title') }}</h2>
+        <p class="text-center text-gray-600 dark:text-gray-300 mb-8">（稍等一下，文件有些大，上传失败..等中午我上传之后再下载）</p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 max-w-4xl mx-auto">
           <div class="download-card">
