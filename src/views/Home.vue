@@ -202,7 +202,9 @@
 
           <div class="download-card transform hover:scale-105 transition-transform focus-within:ring-4 focus-within:ring-nva-adj/50" tabindex="0">
             <h3 class="text-xl font-semibold mb-4 dark:text-white">Windows</h3>
-            <a href="#" target="_blank" rel="noopener noreferrer"
+            <a href="https://adhdgofly.online/download/adhdgofly-win-x64.exe" 
+               target="_blank" 
+               rel="noopener noreferrer"
                class="btn-download focus:outline-none focus:ring-4 focus:ring-nva-adj/50"
                @click="trackEvent('download_windows')">
               {{ $t('download.windows') }}
@@ -370,8 +372,8 @@ const toggleDark = () => {
 const handleDownload = (arch: 'arm64' | 'x64') => {
   // 实现下载逻辑
   const url = arch === 'arm64' 
-    ? '/downloads/adhdgofly-arm64.dmg'
-    : '/downloads/adhdgofly-x64.dmg'
+    ? 'https://adhdgofly.online/download/adhdgofly-arm64.dmg'
+    : 'https://adhdgofly.online/download/adhdgofly-x64.dmg'
   
   // 追踪下载事件
   trackEvent(`download_mac_${arch}`)
