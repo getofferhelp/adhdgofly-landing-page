@@ -93,12 +93,21 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
         <!-- Screenshot 1: Editor Mode -->
         <div class="screenshot-card" tabindex="0">
-          <div class="aspect-w-16 aspect-h-9 bg-gray-100 rounded-lg overflow-hidden cursor-zoom-in"
+          <div class="aspect-w-16 aspect-h-9 bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden cursor-zoom-in relative"
                @click="openImageModal('/images/screenshots/editor.png', $t('features.editor.title'))">
+            <!-- 加载占位符 -->
+            <div v-if="!imageLoadStatus.editor" 
+                 class="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-700">
+              <div class="animate-pulse flex space-x-4">
+                <div class="w-12 h-12 bg-gray-200 dark:bg-gray-600 rounded-full"></div>
+              </div>
+            </div>
             <img src="/images/screenshots/editor.png"
                  :alt="$t('features.editor.title')"
-                 class="w-full h-full object-cover"
-                 loading="lazy" />
+                 class="w-full h-full object-cover transition-opacity duration-300"
+                 :class="{'opacity-0': !imageLoadStatus.editor, 'opacity-100': imageLoadStatus.editor}"
+                 loading="eager"
+                 @load="handleImageLoad('editor')" />
           </div>
           <h3 class="mt-4 text-xl font-semibold text-nva-noun">{{ $t('features.editor.title') }}</h3>
           <p class="mt-2 text-gray-600 dark:text-gray-200">{{ $t('features.editor.desc') }}</p>
@@ -106,12 +115,21 @@
 
         <!-- Screenshot 2: AI Text Processing -->
         <div class="screenshot-card" tabindex="0">
-          <div class="aspect-w-16 aspect-h-9 bg-gray-100 rounded-lg overflow-hidden cursor-zoom-in"
+          <div class="aspect-w-16 aspect-h-9 bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden cursor-zoom-in relative"
                @click="openImageModal('/images/screenshots/ai.png', $t('features.ai.title'))">
+            <!-- 加载占位符 -->
+            <div v-if="!imageLoadStatus.ai" 
+                 class="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-700">
+              <div class="animate-pulse flex space-x-4">
+                <div class="w-12 h-12 bg-gray-200 dark:bg-gray-600 rounded-full"></div>
+              </div>
+            </div>
             <img src="/images/screenshots/ai.png"
                  :alt="$t('features.ai.title')"
-                 class="w-full h-full object-cover"
-                 loading="lazy" />
+                 class="w-full h-full object-cover transition-opacity duration-300"
+                 :class="{'opacity-0': !imageLoadStatus.ai, 'opacity-100': imageLoadStatus.ai}"
+                 loading="eager"
+                 @load="handleImageLoad('ai')" />
           </div>
           <h3 class="mt-4 text-xl font-semibold text-nva-verb">{{ $t('features.ai.title') }}</h3>
           <p class="mt-2 text-gray-600 dark:text-gray-200">{{ $t('features.ai.desc') }}</p>
@@ -119,12 +137,21 @@
 
         <!-- Screenshot 3: Focus Features -->
         <div class="screenshot-card" tabindex="0">
-          <div class="aspect-w-16 aspect-h-9 bg-gray-100 rounded-lg overflow-hidden cursor-zoom-in"
+          <div class="aspect-w-16 aspect-h-9 bg-gray-100 dark:bg-gray-700 rounded-lg overflow-hidden cursor-zoom-in relative"
                @click="openImageModal('/images/screenshots/focus.png', $t('features.focus.title'))">
+            <!-- 加载占位符 -->
+            <div v-if="!imageLoadStatus.focus" 
+                 class="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-700">
+              <div class="animate-pulse flex space-x-4">
+                <div class="w-12 h-12 bg-gray-200 dark:bg-gray-600 rounded-full"></div>
+              </div>
+            </div>
             <img src="/images/screenshots/focus.png"
                  :alt="$t('features.focus.title')"
-                 class="w-full h-full object-cover"
-                 loading="lazy" />
+                 class="w-full h-full object-cover transition-opacity duration-300"
+                 :class="{'opacity-0': !imageLoadStatus.focus, 'opacity-100': imageLoadStatus.focus}"
+                 loading="eager"
+                 @load="handleImageLoad('focus')" />
           </div>
           <h3 class="mt-4 text-xl font-semibold text-nva-adj">{{ $t('features.focus.title') }}</h3>
           <p class="mt-2 text-gray-600 dark:text-gray-200">{{ $t('features.focus.desc') }}</p>
@@ -285,6 +312,31 @@ const selectedImage = ref({
   src: '',
   alt: ''
 })
+
+// 预加载图片
+const preloadImages = () => {
+  const images = [
+    '/images/screenshots/editor.png',
+    '/images/screenshots/ai.png',
+    '/images/screenshots/focus.png'
+  ]
+  
+  images.forEach(src => {
+    const img = new Image()
+    img.src = src
+  })
+}
+
+// 图片加载状态
+const imageLoadStatus = ref({
+  editor: false,
+  ai: false,
+  focus: false
+})
+
+const handleImageLoad = (key: keyof typeof imageLoadStatus.value) => {
+  imageLoadStatus.value[key] = true
+}
 
 // 响应式背景图片选择
 const heroBackgroundSrc = computed(() => {
@@ -671,6 +723,8 @@ onMounted(() => {
     ]
   })
   document.head.appendChild(script)
+
+  preloadImages()
 })
 
 onUnmounted(() => {
@@ -783,7 +837,7 @@ const getTextColor = (index: number) => {
 }
 
 .screenshot-card img {
-  @apply transition-transform duration-300;
+  @apply transition-all duration-300;
 }
 
 .screenshot-card:hover img {
@@ -817,5 +871,24 @@ const getTextColor = (index: number) => {
 .testimonial-content :deep(a) {
   @apply text-nva-noun hover:opacity-80 transition-colors;
   @apply underline underline-offset-2;
+}
+
+/* 添加淡入效果 */
+.screenshot-card img {
+  @apply transition-opacity duration-500 ease-in-out;
+}
+
+/* 脉冲动画 */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 </style>
