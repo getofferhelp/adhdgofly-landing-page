@@ -154,7 +154,7 @@
       </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- 暂时注释掉用户评价部分
     <section class="testimonials py-4 md:py-12 bg-white/80 dark:bg-gray-800/80" id="testimonials">
       <div class="container mx-auto px-4">
         <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 md:mb-12 text-nva-noun">{{ $t('testimonials.title') }}</h2>
@@ -196,6 +196,7 @@
         </div>
       </div>
     </section>
+    -->
 
     <!-- Download Section -->
     <section id="download" class="download py-4 md:py-12 bg-gray-50 dark:bg-gray-800/80">
@@ -628,12 +629,14 @@ onMounted(() => {
             'name': locale.value === 'zh' ? '产品介绍' : 'Features',
             'item': 'https://adhdgofly.com/#features'
           },
+          /* 暂时注释掉用户评价导航
           {
             '@type': 'ListItem',
             'position': 3,
             'name': locale.value === 'zh' ? '用户评价' : 'Testimonials',
             'item': 'https://adhdgofly.com/#testimonials'
           },
+          */
           {
             '@type': 'ListItem',
             'position': 4,
@@ -694,6 +697,7 @@ const features = [
   }
 ]
 
+/* 暂时注释掉用户评价数据
 const testimonials = [
   {
     initial: 'L',
@@ -730,6 +734,7 @@ const testimonials = [
     imagePath: '/images/userimages/yangmin.png'
   }
 ]
+*/
 
 const getIconColor = (index: number) => {
   const colors = ['text-nva-noun', 'text-nva-verb', 'text-nva-adj']
