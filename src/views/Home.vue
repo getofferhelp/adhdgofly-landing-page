@@ -198,6 +198,12 @@
                     class="btn-download focus:outline-none focus:ring-4 focus:ring-nva-adj/50">
               {{ $t('download.mac') }}
             </button>
+            <div class="mt-4 text-center">
+              <router-link to="/download" 
+                 class="text-nva-noun dark:text-blue-400 hover:underline text-sm">
+                {{ $t('download.viewMoreDetails') }}
+              </router-link>
+            </div>
           </div>
 
           <div class="download-card transform hover:scale-105 transition-transform focus-within:ring-4 focus-within:ring-nva-adj/50" tabindex="0">
