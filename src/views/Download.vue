@@ -19,14 +19,14 @@
           </div>
         </div>
 
-        <!-- Windows 下载选项 -->
+        <!-- Windows 下载卡片 -->
         <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg mb-8">
-          <h2 class="text-2xl font-semibold mb-4 dark:text-white">Windows</h2>
-          <div class="space-y-4">
-            <a href="https://adhdgofly.online/download/adhdgofly-win-x64.exe" 
-               class="block w-full btn-primary p-4 text-center">
-              {{ $t('downloadPage.downloadNow') }}
-            </a>
+          <div class="flex items-center mb-4">
+            <h3 class="text-xl font-semibold dark:text-white">Windows</h3>
+          </div>
+          <div class="text-gray-600 dark:text-gray-300 mb-4">
+            <p class="text-lg font-medium text-nva-noun">即将发布</p>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">Windows 版本正在开发中，敬请期待！</p>
           </div>
         </div>
 
@@ -119,7 +119,8 @@
             </li>
           </ol>
 
-          <!-- Windows 安装指南 -->
+          <!-- Windows 安装指南（暂时注释，等Windows版本发布时恢复） -->
+          <!--
           <h3 class="text-xl font-semibold mb-3 dark:text-white">Windows:</h3>
           <ol class="space-y-4 text-gray-600 dark:text-gray-300">
             <li class="flex items-start">
@@ -146,6 +147,7 @@
               <p>安装完成后，从开始菜单或桌面快捷方式启动应用</p>
             </li>
           </ol>
+          -->
         </div>
 
         <!-- 版本历史 -->

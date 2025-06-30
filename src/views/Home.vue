@@ -206,19 +206,20 @@
             </div>
           </div>
 
-          <div class="download-card transform hover:scale-105 transition-transform focus-within:ring-4 focus-within:ring-nva-adj/50" tabindex="0">
-            <h3 class="text-xl font-semibold mb-4 dark:text-white">Windows</h3>
-            <a href="https://adhdgofly.online/download/adhdgofly-win-x64.exe" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               class="btn-download focus:outline-none focus:ring-4 focus:ring-nva-adj/50"
-               @click="trackEvent('download_windows')">
-              {{ $t('download.windows') }}
-            </a>
-            <div class="mt-4 text-center">
-              <router-link to="/download" 
-                 class="text-nva-noun dark:text-blue-400 hover:underline text-sm">
-                {{ $t('download.viewMoreDetails') }}
+          <!-- Windows下载卡片 -->
+          <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg">
+            <div class="flex items-center mb-4">
+              <h3 class="text-xl font-semibold dark:text-white">Windows</h3>
+            </div>
+            <div class="text-gray-600 dark:text-gray-300 mb-4">
+              <p class="text-lg font-medium text-nva-noun">即将发布</p>
+            </div>
+            <div class="flex flex-col space-y-2">
+              <button disabled class="bg-gray-300 dark:bg-gray-600 text-gray-600 dark:text-gray-400 px-4 py-2 rounded-lg cursor-not-allowed">
+                {{ $t('home.downloadForWindows') }}
+              </button>
+              <router-link to="/download" class="text-sm text-center text-gray-500 dark:text-gray-400 hover:text-nva-noun dark:hover:text-nva-noun">
+                {{ $t('home.moreInfo') }}
               </router-link>
             </div>
           </div>
