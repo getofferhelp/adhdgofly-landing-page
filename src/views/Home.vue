@@ -41,7 +41,15 @@
     <!-- Hero Section -->
     <section class="hero relative" id="hero">
       <div class="absolute inset-0">
-        <img :src="heroBackgroundSrc"
+        <picture v-if="useJPG">
+          <source :srcset="heroBackgroundSrc + '.JPG'" type="image/jpeg">
+          <img :src="heroBackgroundSrc + '.png'"
+               :alt="isDark ? 'ADHD GO FLY 工具界面展示 - 深色模式' : 'ADHD GO FLY 工具界面展示 - 浅色模式'"
+               class="w-full h-full object-cover"
+               fetchpriority="high" />
+        </picture>
+        <img v-else
+             :src="heroBackgroundSrc + '.png'"
              :alt="isDark ? 'ADHD GO FLY 工具界面展示 - 深色模式' : 'ADHD GO FLY 工具界面展示 - 浅色模式'"
              class="w-full h-full object-cover"
              fetchpriority="high" />
@@ -295,8 +303,21 @@ const heroBackgroundSrc = computed(() => {
 
   const imageHeight = getImageHeight(imageWidth)
   const suffix = mode === 'dark' ? '-dark' : ''
+  
+  return `/images/hero-bg-${imageWidth}x${imageHeight}${suffix}`
+})
 
-  return `/images/hero-bg-${imageWidth}x${imageHeight}${suffix}.png`
+// 判断是否使用JPG格式
+const useJPG = computed(() => {
+  const width = windowWidth.value
+  const isDarkMode = isDark.value
+  
+  // 根据实际文件情况判断是否使用JPG
+  if (isDarkMode) {
+    return width === 1024 || width === 1280
+  } else {
+    return width === 1440 || width === 1920
+  }
 })
 
 // 根据宽度获取对应的高度
