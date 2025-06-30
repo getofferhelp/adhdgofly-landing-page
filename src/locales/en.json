@@ -2,8 +2,8 @@
   "hero": {
     "titleADHD": "ADHD ",
     "titleGoFly": "GO FLY",
-    "titleLine2": "Make Reading and Writing Easier",
-    "subtitle": "A multilingual reading and editing tool tailored for ADHD individuals",
+    "titleLine2": "Make Reading and Writing Effortless",
+    "subtitle": "A multilingual reading and editing tool designed for ADHD individuals",
     "tryWeb": "Try Web Version",
     "download": "Download Desktop App"
   },
@@ -11,27 +11,27 @@
     "title": "Key Features",
     "editor": {
       "title": "Smart Editor",
-      "desc": "Real-time word segmentation, multi-language support, focused writing experience"
+      "desc": "Real-time intelligent word segmentation, multilingual support, focused writing experience"
     },
     "ai": {
       "title": "AI Text Processing",
-      "desc": "Smart text analysis, summary generation, multi-language translation"
+      "desc": "Intelligent text analysis, summary generation, multilingual translation"
     },
     "focus": {
-      "title": "Focus Assistant",
-      "desc": "Auto-save, smart suggestions, distraction reduction"
+      "title": "Focus Assistance",
+      "desc": "Auto-save, smart prompts, distraction reduction"
     },
     "adhd": {
       "title": "ADHD-Friendly Design",
-      "desc": "Focus mode, customizable reading experience, reduced distractions"
+      "desc": "Focus mode, customizable reading experience, reduced distracting elements"
     },
     "language": {
-      "title": "Multi-language Support",
+      "title": "Multilingual Support",
       "desc": "Supports Chinese, English, French, Spanish, Russian, and Japanese"
     },
     "platform": {
-      "title": "Cross-platform",
-      "desc": "Access via web, available for macOS and Windows"
+      "title": "Cross-Platform",
+      "desc": "Web version accessible anytime, supports macOS and Windows"
     }
   },
   "download": {
@@ -40,23 +40,49 @@
     "windows": "Download for Windows",
     "macTipsTitle": "Can't open the app?",
     "macTip1": "After downloading, hold the Control key (⌃) and click the app",
-    "macTip2": "Select \"Open\" from the menu",
+    "macTip2": "Select \"Open\" from the popup menu",
     "macTip3": "Click \"Open\" again in the confirmation dialog",
-    "winTipsTitle": "Can't open the app?",
-    "winTip1": "Click \"More info\"",
-    "winTip2": "Click \"Run anyway\""
+    "viewMoreDetails": "View More Details",
+    "selectVersion": "Select Version",
+    "macM1": "Apple Silicon Version",
+    "macIntel": "Intel Version",
+    "forAppleSilicon": "For Macs with M1/M2/M3 chips",
+    "forIntelMac": "For Macs with Intel chips",
+    "downloadStarting": "Download starting...",
+    "detectedSystem": "Detected System",
+    "otherVersions": "Other Versions",
+    "detectedInfo": "Detected {chip}, recommended version selected",
+    "recommended": "Recommended"
   },
   "testimonials": {
     "title": "User Reviews",
-    "review1": "As an ADHD creator, this tool helps me stay focused. The <a href=\"https://adhdgofly.online/docs/features/smart-editor\" target=\"_blank\">smart editor's</a> real-time word segmentation makes my writing process smoother, and the AI features are really practical.",
-    "review2": "I love the design philosophy of this editor. The interface is clean and doesn't distract, while the <a href=\"https://adhdgofly.online/docs/features/ai-features\" target=\"_blank\">AI features</a> provide help when needed.",
+    "review1": "As an ADHD creator, this tool helps me stay focused. The <a href=\"https://adhdgofly.online/docs/features/smart-editor\" target=\"_blank\">Smart Editor's</a> real-time word segmentation makes my writing process smoother, and the AI features are practical.",
+    "review2": "I really love the design philosophy of this editor. The interface is clean and distraction-free, while the <a href=\"https://adhdgofly.online/docs/features/ai-features\" target=\"_blank\">AI features</a> provide help when needed.",
     "review3": "As a freelance writer, I need a tool that helps me maintain focus. This software perfectly meets my needs, especially its <a href=\"https://adhdgofly.online/docs/features/focus-mode\" target=\"_blank\">focus assistance features</a>.",
-    "review4": "I share a lot of ADHD-related experiences on <a href=\"https://www.xiaohongshu.com/user/profile/12345678\" target=\"_blank\">Xiaohongshu</a>. This software really solves our writing pain points. Try it out! Check my pinned post for detailed experience 👉",
-    "review5": "Real feedback after one month of use: The <a href=\"https://adhdgofly.online/docs/features/ai-analysis\" target=\"_blank\">AI features</a> have helped me optimize many articles, especially in organizing thoughts. Here's a screenshot showing how intelligent the text analysis is."
+    "review4": "I've shared many ADHD-related experiences on <a href=\"https://www.xiaohongshu.com/user/profile/12345678\" target=\"_blank\">Xiaohongshu</a>. This software really addresses our writing pain points. I recommend everyone to try it! Check my pinned post for detailed user experience 👉",
+    "review5": "Real feedback after a month of use: The <a href=\"https://adhdgofly.online/docs/features/ai-analysis\" target=\"_blank\">AI features</a> have helped me optimize many articles, especially in organizing thoughts. Here's a screenshot showing how intelligent the text analysis is."
   },
   "meta": {
-    "title": "ADHD GO FLY - Multilingual Reading & Editing Tool",
-    "description": "A multilingual reading and editing tool designed for ADHD individuals, featuring smart word segmentation, AI assistance, and focus mode."
+    "title": "ADHD GO FLY - Multilingual Reading and Editing Tool",
+    "description": "A multilingual reading and editing tool tailored for ADHD individuals, featuring smart word segmentation, AI assistance, and focus mode."
   },
-  "backToTop": "Back to Top"
+  "backToTop": "Back to Top",
+  "downloadPage": {
+    "title": "Download ADHD GO FLY",
+    "downloadNow": "Download Now",
+    "systemRequirements": "System Requirements",
+    "installationGuide": "Installation Guide",
+    "versionHistory": "Version History",
+    "requirements": {
+      "os": "macOS 11.0 (Big Sur) or later",
+      "ram": "4GB RAM or more",
+      "disk": "500MB available disk space"
+    },
+    "installation": {
+      "step1": "Download the installation package (.dmg file) for your Mac chip type",
+      "step2": "Double-click the downloaded .dmg file to open the installation image",
+      "step3": "Drag the ADHD GO FLY application to the Applications folder",
+      "step4": "When first running, hold Control key and click the app icon, then select 'Open'"
+    }
+  }
 } 

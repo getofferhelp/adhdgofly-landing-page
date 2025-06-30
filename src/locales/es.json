@@ -1,60 +1,88 @@
 {
+  "downloadPage": {
+    "title": "Descargar ADHD GO FLY",
+    "downloadNow": "Descargar ahora",
+    "systemRequirements": "Requisitos del sistema",
+    "installationGuide": "Guía de instalación",
+    "versionHistory": "Historial de versiones",
+    "requirements": {
+      "os": "macOS 11.0 (Big Sur) o posterior",
+      "ram": "4GB de RAM o más",
+      "disk": "500MB de espacio disponible en disco"
+    },
+    "installation": {
+      "step1": "Descargue el paquete de instalación (.dmg) para su tipo de chip Mac",
+      "step2": "Haga doble clic en el archivo .dmg descargado para abrir la imagen de instalación",
+      "step3": "Arrastre la aplicación ADHD GO FLY a la carpeta de Aplicaciones",
+      "step4": "Al ejecutar por primera vez, mantenga presionada la tecla Control y haga clic en el icono de la aplicación, luego seleccione 'Abrir'"
+    }
+  },
   "meta": {
-    "title": "ADHD GO FLY - Herramienta de Lectura y Edición Multilingüe",
-    "description": "Una herramienta de lectura y edición multilingüe diseñada para personas con TDAH, con segmentación inteligente de palabras, asistencia de IA y modo de concentración."
+    "title": "ADHD GO FLY - Herramienta de lectura y edición multilingüe",
+    "description": "Una herramienta de lectura y edición multilingüe diseñada para personas con TDAH, con segmentación inteligente de palabras, asistencia de IA y modo de enfoque."
   },
   "backToTop": "Volver arriba",
   "hero": {
     "titleADHD": "ADHD ",
     "titleGoFly": "GO FLY",
-    "titleLine2": "Haz que leer y escribir sea más fácil",
-    "subtitle": "Una herramienta multilingüe de lectura y edición diseñada para personas con TDAH",
-    "tryWeb": "Prueba la versión web",
-    "download": "Descarga la aplicación"
+    "titleLine2": "Haga que la lectura y la escritura sean más fáciles",
+    "subtitle": "Una herramienta de lectura y edición multilingüe diseñada para personas con TDAH",
+    "tryWeb": "Probar versión web",
+    "download": "Descargar aplicación"
   },
   "features": {
-    "title": "Características Principales",
+    "title": "Características principales",
     "editor": {
-      "title": "Editor Inteligente",
-      "desc": "Segmentación en tiempo real, soporte multilingüe, experiencia de escritura enfocada"
+      "title": "Editor inteligente",
+      "desc": "Segmentación inteligente de palabras en tiempo real, soporte multilingüe, experiencia de escritura enfocada"
     },
     "ai": {
-      "title": "Procesamiento IA de Texto",
-      "desc": "Análisis inteligente, generación de resúmenes, traducción multilingüe"
+      "title": "Procesamiento de texto IA",
+      "desc": "Análisis inteligente de texto, generación de resúmenes, traducción multilingüe"
     },
     "focus": {
-      "title": "Asistente de Concentración",
+      "title": "Asistencia de enfoque",
       "desc": "Guardado automático, sugerencias inteligentes, reducción de distracciones"
     },
     "adhd": {
       "title": "Diseño amigable para TDAH",
-      "desc": "Modo de enfoque, experiencia de lectura personalizable, menos distracciones"
+      "desc": "Modo de enfoque, experiencia de lectura personalizable, reducción de elementos distractores"
     },
     "language": {
       "title": "Soporte multilingüe",
-      "desc": "Compatible con chino, inglés, francés, español, ruso y japonés"
+      "desc": "Soporta chino, inglés, francés, español, ruso y japonés"
     },
     "platform": {
       "title": "Multiplataforma",
-      "desc": "Acceso web, disponible para macOS y Windows"
+      "desc": "Versión web accesible en cualquier momento, compatible con macOS y Windows"
     }
   },
   "download": {
     "title": "Descargar",
     "mac": "Descargar para macOS",
     "windows": "Descargar para Windows",
-    "macTipsTitle": "¿No puedes abrir la aplicación?",
-    "macTip1": "Después de descargar, mantén presionada la tecla Control (⌃) y haz clic en la aplicación",
-    "macTip2": "Selecciona \"Abrir\" en el menú",
-    "macTip3": "Haz clic en \"Abrir\" nuevamente en el diálogo de confirmación",
-    "winTipsTitle": "¿No puedes abrir la aplicación?",
-    "winTip1": "Haz clic en \"Más información\"",
-    "winTip2": "Haz clic en \"Ejecutar de todos modos\""
+    "macTipsTitle": "¿No puede abrir la aplicación?",
+    "macTip1": "Después de descargar, mantenga presionada la tecla Control (⌃) y haga clic en la aplicación",
+    "macTip2": "Seleccione \"Abrir\" en el menú emergente",
+    "macTip3": "Haga clic en \"Abrir\" nuevamente en el diálogo de confirmación",
+    "viewMoreDetails": "Ver más detalles",
+    "selectVersion": "Seleccionar versión",
+    "macM1": "Versión Apple Silicon",
+    "macIntel": "Versión Intel",
+    "forAppleSilicon": "Para Mac con chips M1/M2/M3",
+    "forIntelMac": "Para Mac con chips Intel",
+    "downloadStarting": "Descarga iniciando...",
+    "detectedSystem": "Sistema detectado",
+    "otherVersions": "Otras versiones",
+    "detectedInfo": "Detectado {chip}, versión recomendada seleccionada",
+    "recommended": "Recomendado"
   },
   "testimonials": {
-    "title": "Opiniones de Usuarios",
-    "review1": "Como creador con TDAH, esta herramienta me ayuda a mantener el enfoque. La segmentación en tiempo real del editor inteligente hace que mi proceso de escritura sea más fluido, y las funciones de IA son realmente prácticas.",
-    "review2": "Me encanta la filosofía de diseño de este editor. La interfaz es limpia y no distrae, mientras que las funciones de IA proporcionan ayuda cuando se necesita.",
-    "review3": "Como escritor freelance, necesito una herramienta que me ayude a mantener la concentración. Este software satisface perfectamente mis necesidades, especialmente sus funciones de asistencia para el enfoque."
+    "title": "Opiniones de usuarios",
+    "review1": "Como creador con TDAH, esta herramienta me ayuda a mantener el enfoque. La segmentación de palabras en tiempo real del <a href=\"https://adhdgofly.online/docs/features/smart-editor\" target=\"_blank\">Editor Inteligente</a> hace que mi proceso de escritura sea más fluido, y las funciones de IA son prácticas.",
+    "review2": "Me encanta realmente la filosofía de diseño de este editor. La interfaz es limpia y libre de distracciones, mientras que las <a href=\"https://adhdgofly.online/docs/features/ai-features\" target=\"_blank\">funciones de IA</a> proporcionan ayuda cuando se necesita.",
+    "review3": "Como escritor freelance, necesito una herramienta que me ayude a mantener el enfoque. Este software satisface perfectamente mis necesidades, especialmente sus <a href=\"https://adhdgofly.online/docs/features/focus-mode\" target=\"_blank\">funciones de asistencia de enfoque</a>.",
+    "review4": "He compartido muchas experiencias relacionadas con TDAH en <a href=\"https://www.xiaohongshu.com/user/profile/12345678\" target=\"_blank\">Xiaohongshu</a>. Este software realmente aborda nuestros problemas de escritura. ¡Recomiendo a todos que lo prueben! Consulta mi publicación fijada para una experiencia de usuario detallada 👉",
+    "review5": "Comentarios reales después de un mes de uso: Las <a href=\"https://adhdgofly.online/docs/features/ai-analysis\" target=\"_blank\">funciones de IA</a> me han ayudado a optimizar muchos artículos, especialmente en la organización de ideas. Aquí hay una captura de pantalla que muestra qué tan inteligente es el análisis de texto."
   }
 } 

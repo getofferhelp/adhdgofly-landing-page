@@ -1,60 +1,88 @@
 {
-  "meta": {
-    "title": "ADHD GO FLY - 多言語読書・編集ツール",
-    "description": "ADHDを持つ人々のために設計された多言語読書・編集ツール。スマートな単語分割、AI支援、フォーカスモードを提供します。"
+  "downloadPage": {
+    "title": "ADHD GO FLY をダウンロード",
+    "downloadNow": "今すぐダウンロード",
+    "systemRequirements": "システム要件",
+    "installationGuide": "インストールガイド",
+    "versionHistory": "バージョン履歴",
+    "requirements": {
+      "os": "macOS 11.0 (Big Sur) 以降",
+      "ram": "4GB以上のRAM",
+      "disk": "500MBの空き容量"
+    },
+    "installation": {
+      "step1": "お使いのMacチップタイプに合わせたインストールパッケージ（.dmgファイル）をダウンロード",
+      "step2": "ダウンロードした.dmgファイルをダブルクリックしてインストールイメージを開く",
+      "step3": "ADHD GO FLYアプリケーションをアプリケーションフォルダにドラッグ",
+      "step4": "初回起動時は、Controlキーを押しながらアプリケーションアイコンをクリックし、'開く'を選択"
+    }
   },
-  "backToTop": "トップに戻る",
+  "meta": {
+    "title": "ADHD GO FLY - 多言語読み書きツール",
+    "description": "ADHDの方向けに設計された多言語読み書きツール。インテリジェントな単語分割、AI支援、フォーカスモードを搭載。"
+  },
+  "backToTop": "トップへ戻る",
   "hero": {
     "titleADHD": "ADHD ",
     "titleGoFly": "GO FLY",
     "titleLine2": "読み書きをもっと簡単に",
-    "subtitle": "ADHDの方のために設計された多言語読書・編集ツール",
+    "subtitle": "ADHDの方向けに設計された多言語読み書きツール",
     "tryWeb": "ウェブ版を試す",
-    "download": "アプリをダウンロード"
+    "download": "デスクトップアプリをダウンロード"
   },
   "features": {
     "title": "主な機能",
     "editor": {
-      "title": "スマートエディター",
-      "desc": "リアルタイム分かち書き、多言語対応、集中できる執筆環境"
+      "title": "スマートエディタ",
+      "desc": "リアルタイムのインテリジェントな単語分割、多言語サポート、集中できる執筆体験"
     },
     "ai": {
       "title": "AIテキスト処理",
-      "desc": "テキスト分析、要約生成、多言語翻訳"
+      "desc": "インテリジェントなテキスト分析、要約生成、多言語翻訳"
     },
     "focus": {
       "title": "集中サポート",
-      "desc": "自動保存、スマートな提案、集中を妨げない"
+      "desc": "自動保存、スマートな提案、気が散る要素の削減"
     },
     "adhd": {
       "title": "ADHD対応デザイン",
-      "desc": "フォーカスモード、カスタマイズ可能な読書体験、気が散りにくい"
+      "desc": "フォーカスモード、カスタマイズ可能な読書体験、気が散る要素の最小化"
     },
     "language": {
       "title": "多言語サポート",
       "desc": "中国語、英語、フランス語、スペイン語、ロシア語、日本語に対応"
     },
     "platform": {
-      "title": "マルチプラットフォーム",
-      "desc": "ウェブアクセス、macOSとWindows対応"
+      "title": "クロスプラットフォーム",
+      "desc": "ウェブ版はいつでもアクセス可能、macOSとWindowsに対応"
     }
   },
   "download": {
     "title": "ダウンロード",
     "mac": "macOS版をダウンロード",
     "windows": "Windows版をダウンロード",
-    "macTipsTitle": "アプリを開けませんか？",
+    "macTipsTitle": "アプリが開けない場合",
     "macTip1": "ダウンロード後、Controlキー(⌃)を押しながらアプリをクリック",
-    "macTip2": "メニューから\"開く\"を選択",
-    "macTip3": "確認ダイアログで再度\"開く\"をクリック",
-    "winTipsTitle": "アプリを開けませんか？",
-    "winTip1": "\"詳細情報\"をクリック",
-    "winTip2": "\"実行\"をクリック"
+    "macTip2": "ポップアップメニューから「開く」を選択",
+    "macTip3": "確認ダイアログで再度「開く」をクリック",
+    "viewMoreDetails": "詳細を表示",
+    "selectVersion": "バージョンを選択",
+    "macM1": "Apple Silicon版",
+    "macIntel": "Intel版",
+    "forAppleSilicon": "M1/M2/M3チップ搭載Macに対応",
+    "forIntelMac": "Intelチップ搭載Macに対応",
+    "downloadStarting": "ダウンロードを開始しています...",
+    "detectedSystem": "検出されたシステム",
+    "otherVersions": "その他のバージョン",
+    "detectedInfo": "{chip}が検出されました。推奨バージョンが選択されています",
+    "recommended": "推奨"
   },
   "testimonials": {
     "title": "ユーザーレビュー",
-    "review1": "ADHDのクリエイターとして、このツールは集中力の維持に役立っています。スマートエディターのリアルタイム分かち書きで執筆がスムーズになり、AI機能も実用的です。",
-    "review2": "このエディターの設計思想が大好きです。インターフェースがシンプルで気が散らず、必要な時にAI機能のサポートが得られます。",
-    "review3": "フリーランスライターとして、集中力を保てるツールが必要でした。このソフトウェアは私のニーズを完璧に満たしてくれます。特に集中サポート機能が素晴らしいです。"
+    "review1": "ADHDのクリエイターとして、このツールは集中力の維持に役立っています。<a href=\"https://adhdgofly.online/docs/features/smart-editor\" target=\"_blank\">スマートエディタ</a>のリアルタイム単語分割機能で執筆プロセスがスムーズになり、AI機能も実用的です。",
+    "review2": "このエディタのデザイン哲学が本当に気に入っています。インターフェースはクリーンで気が散らず、<a href=\"https://adhdgofly.online/docs/features/ai-features\" target=\"_blank\">AI機能</a>は必要な時にサポートを提供してくれます。",
+    "review3": "フリーランスライターとして、集中力を維持できるツールが必要でした。このソフトウェアは私のニーズに完璧に応えてくれます。特に<a href=\"https://adhdgofly.online/docs/features/focus-mode\" target=\"_blank\">集中サポート機能</a>が優れています。",
+    "review4": "<a href=\"https://www.xiaohongshu.com/user/profile/12345678\" target=\"_blank\">Xiaohongshu</a>でADHDに関する多くの経験を共有してきました。このソフトウェアは私たちの執筆における課題を本当に解決してくれます。皆さんにもぜひ試していただきたいです！詳しい使用体験は固定投稿をご覧ください 👉",
+    "review5": "1ヶ月使用した後の正直な感想：<a href=\"https://adhdgofly.online/docs/features/ai-analysis\" target=\"_blank\">AI機能</a>は多くの記事の最適化に役立ちました。特に考えをまとめる際に効果的です。テキスト分析がいかにインテリジェントかを示すスクリーンショットをご覧ください。"
   }
 } 
