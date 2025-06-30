@@ -84,5 +84,9 @@
       "step3": "Drag the ADHD GO FLY application to the Applications folder",
       "step4": "When first running, hold Control key and click the app icon, then select 'Open'"
     }
+  },
+  "home": {
+    "downloadForWindows": "Download for Windows",
+    "moreInfo": "More Information"
   }
 } 
