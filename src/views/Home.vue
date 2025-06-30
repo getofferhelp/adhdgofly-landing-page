@@ -253,6 +253,7 @@
             <div class="text-gray-600 dark:text-gray-300 mb-4">
               <p class="text-lg font-medium text-nva-noun">即将发布</p>
             </div>
+            <!-- 暂时注释掉 Windows 下载按钮，等待发布后再启用
             <div class="flex flex-col space-y-2">
               <button disabled class="bg-gray-300 dark:bg-gray-600 text-gray-600 dark:text-gray-400 px-4 py-2 rounded-lg cursor-not-allowed">
                 {{ $t('home.downloadForWindows') }}
@@ -261,6 +262,7 @@
                 {{ $t('home.moreInfo') }}
               </router-link>
             </div>
+            -->
           </div>
         </div>
       </div>
