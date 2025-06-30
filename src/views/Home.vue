@@ -85,9 +85,10 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
         <!-- Screenshot 1: Editor Mode -->
         <div class="screenshot-card" tabindex="0">
-          <div class="aspect-w-16 aspect-h-9 bg-gray-100 rounded-lg overflow-hidden">
+          <div class="aspect-w-16 aspect-h-9 bg-gray-100 rounded-lg overflow-hidden cursor-zoom-in"
+               @click="openImageModal('/images/screenshots/editor.png', $t('features.editor.title'))">
             <img src="/images/screenshots/editor.png"
-                 alt="ADHD GO FLY 智能编辑器界面 - 支持实时分词和多语言编辑"
+                 :alt="$t('features.editor.title')"
                  class="w-full h-full object-cover"
                  loading="lazy" />
           </div>
@@ -97,9 +98,10 @@
 
         <!-- Screenshot 2: AI Text Processing -->
         <div class="screenshot-card" tabindex="0">
-          <div class="aspect-w-16 aspect-h-9 bg-gray-100 rounded-lg overflow-hidden">
+          <div class="aspect-w-16 aspect-h-9 bg-gray-100 rounded-lg overflow-hidden cursor-zoom-in"
+               @click="openImageModal('/images/screenshots/ai.png', $t('features.ai.title'))">
             <img src="/images/screenshots/ai.png"
-                 alt="ADHD GO FLY AI文本处理功能展示 - 智能分析和翻译功能"
+                 :alt="$t('features.ai.title')"
                  class="w-full h-full object-cover"
                  loading="lazy" />
           </div>
@@ -109,9 +111,10 @@
 
         <!-- Screenshot 3: Focus Features -->
         <div class="screenshot-card" tabindex="0">
-          <div class="aspect-w-16 aspect-h-9 bg-gray-100 rounded-lg overflow-hidden">
+          <div class="aspect-w-16 aspect-h-9 bg-gray-100 rounded-lg overflow-hidden cursor-zoom-in"
+               @click="openImageModal('/images/screenshots/focus.png', $t('features.focus.title'))">
             <img src="/images/screenshots/focus.png"
-                 alt="ADHD GO FLY 专注模式界面 - 减少干扰的阅读环境"
+                 :alt="$t('features.focus.title')"
                  class="w-full h-full object-cover"
                  loading="lazy" />
           </div>
@@ -243,6 +246,14 @@
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
       </svg>
     </button>
+
+    <!-- Image Modal -->
+    <ImageModal
+      :show="selectedImage.show"
+      :image-src="selectedImage.src"
+      :image-alt="selectedImage.alt"
+      @close="closeImageModal"
+    />
   </main>
 </template>
 
@@ -250,6 +261,7 @@
 import { useI18n } from 'vue-i18n'
 import { ref, onMounted, computed, onUnmounted } from 'vue'
 import DownloadModal from '@/components/DownloadModal.vue'
+import ImageModal from '../components/ImageModal.vue'
 
 const { t, locale } = useI18n()
 const isDark = ref(false)
@@ -257,6 +269,13 @@ const windowWidth = ref(1920)
 const isLoading = ref(true)
 const showBackToTop = ref(false)
 const showDownloadModal = ref(false)
+
+// 图片模态框状态
+const selectedImage = ref({
+  show: false,
+  src: '',
+  alt: ''
+})
 
 // 响应式背景图片选择
 const heroBackgroundSrc = computed(() => {
@@ -389,6 +408,20 @@ const handleDownload = (arch: 'arm64' | 'x64') => {
   
   // 关闭 Modal
   showDownloadModal.value = false
+}
+
+// 打开图片模态框
+const openImageModal = (src: string, alt: string) => {
+  selectedImage.value = {
+    show: true,
+    src,
+    alt
+  }
+}
+
+// 关闭图片模态框
+const closeImageModal = () => {
+  selectedImage.value.show = false
 }
 
 onMounted(() => {
@@ -720,10 +753,15 @@ const getTextColor = (index: number) => {
 }
 
 .screenshot-card {
-  @apply bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg transform transition-transform duration-300;
-  &:hover {
-    @apply -translate-y-2 shadow-xl;
-  }
+  @apply bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg transform transition-transform duration-300 hover:scale-[1.02];
+}
+
+.screenshot-card img {
+  @apply transition-transform duration-300;
+}
+
+.screenshot-card:hover img {
+  @apply scale-105;
 }
 
 .aspect-w-16 {
