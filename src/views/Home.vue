@@ -209,12 +209,11 @@
                @click="trackEvent('download_windows')">
               {{ $t('download.windows') }}
             </a>
-            <div class="install-tips mt-4 text-sm text-gray-600 dark:text-gray-300">
-              <p class="font-medium mb-2">{{ $t('download.winTipsTitle') }}</p>
-              <ol class="list-decimal list-inside space-y-1 text-left">
-                <li>{{ $t('download.winTip1') }}</li>
-                <li>{{ $t('download.winTip2') }}</li>
-              </ol>
+            <div class="mt-4 text-center">
+              <router-link to="/download" 
+                 class="text-nva-noun dark:text-blue-400 hover:underline text-sm">
+                {{ $t('download.viewMoreDetails') }}
+              </router-link>
             </div>
           </div>
         </div>
