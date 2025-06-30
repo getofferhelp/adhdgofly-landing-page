@@ -59,7 +59,8 @@
             </li>
           </ul>
 
-          <!-- Windows 系统要求 -->
+          <!-- Windows 系统要求（暂时注释，等Windows版本发布时恢复） -->
+          <!--
           <h3 class="text-xl font-semibold mb-3 dark:text-white">Windows:</h3>
           <ul class="space-y-3 text-gray-600 dark:text-gray-300">
             <li class="flex items-start">
@@ -81,6 +82,7 @@
               <span>500MB 可用磁盘空间</span>
             </li>
           </ul>
+          -->
         </div>
 
         <!-- 安装指南 -->
