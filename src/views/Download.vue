@@ -106,7 +106,16 @@
             </li>
             <li class="flex items-start">
               <span class="flex-shrink-0 w-6 h-6 rounded-full bg-nva-noun text-white flex items-center justify-center mr-3">4</span>
-              <p>首次运行时，按住 Control 键点击应用图标并选择"打开"</p>
+              <div>
+                <p>首次运行时可能会出现安全提示，这是因为我们没有购买相关证书。请按以下步骤操作：</p>
+                <ul class="ml-4 mt-2 space-y-2 text-gray-500 dark:text-gray-400">
+                  <li>• 在应用程序文件夹中找到 ADHD GO FLY</li>
+                  <li>• 按住 Control 键并点击应用图标</li>
+                  <li>• 在弹出菜单中选择"打开"</li>
+                  <li>• 在弹出的确认对话框中再次点击"打开"</li>
+                </ul>
+                <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">注：这个步骤只需要在首次运行时执行一次，之后可以直接打开应用。</p>
+              </div>
             </li>
           </ol>
 
@@ -119,7 +128,14 @@
             </li>
             <li class="flex items-start">
               <span class="flex-shrink-0 w-6 h-6 rounded-full bg-nva-noun text-white flex items-center justify-center mr-3">2</span>
-              <p>双击运行下载的安装程序</p>
+              <div>
+                <p>双击运行安装程序，如果出现 Windows Defender SmartScreen 提示，请按以下步骤操作：</p>
+                <ul class="ml-4 mt-2 space-y-2 text-gray-500 dark:text-gray-400">
+                  <li>• 点击提示窗口中的"更多信息"</li>
+                  <li>• 点击"仍要运行"按钮继续安装</li>
+                </ul>
+                <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">注：出现此提示是因为这是新发布的软件，随着使用人数增加，此提示会自动消失。</p>
+              </div>
             </li>
             <li class="flex items-start">
               <span class="flex-shrink-0 w-6 h-6 rounded-full bg-nva-noun text-white flex items-center justify-center mr-3">3</span>
