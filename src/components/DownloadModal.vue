@@ -30,7 +30,12 @@
         <!-- 区域检测提示 -->
         <div v-if="isInChina !== null" class="mb-4 p-3 bg-green-50 dark:bg-green-900/30 rounded-lg text-sm">
           <p class="text-green-700 dark:text-green-300">
-            {{ isInChina ? '检测到您在中国大陆地区，已为您优先显示国内下载源' : 'You are accessing from outside mainland China, GitHub source is recommended' }}
+            {{ isInChina ? $t('download.downloadSources.china.recommended') : $t('download.downloadSources.github.recommended') }}
+          </p>
+        </div>
+        <div v-else class="mb-4 p-3 bg-yellow-50 dark:bg-yellow-900/30 rounded-lg text-sm">
+          <p class="text-yellow-700 dark:text-yellow-300">
+            {{ $t('download.downloadSources.detection.error') }}
           </p>
         </div>
 
@@ -57,8 +62,8 @@
                         : 'border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700'
                     ]">
               <div class="text-left">
-                <div class="font-semibold dark:text-white">国内下载源</div>
-                <div class="text-sm text-gray-500 dark:text-gray-400">推荐大陆用户使用</div>
+                <div class="font-semibold dark:text-white">{{ $t('download.downloadSources.china.name') }}</div>
+                <div class="text-sm text-gray-500 dark:text-gray-400">{{ $t('download.downloadSources.china.description') }}</div>
               </div>
               <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -74,8 +79,8 @@
                         : 'border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700'
                     ]">
               <div class="text-left">
-                <div class="font-semibold dark:text-white">GitHub 下载源</div>
-                <div class="text-sm text-gray-500 dark:text-gray-400">推荐海外用户使用</div>
+                <div class="font-semibold dark:text-white">{{ $t('download.downloadSources.github.name') }}</div>
+                <div class="text-sm text-gray-500 dark:text-gray-400">{{ $t('download.downloadSources.github.description') }}</div>
               </div>
               <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -105,8 +110,8 @@
                         : 'border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700'
                     ]">
               <div class="text-left">
-                <div class="font-semibold dark:text-white">国内下载源</div>
-                <div class="text-sm text-gray-500 dark:text-gray-400">推荐大陆用户使用</div>
+                <div class="font-semibold dark:text-white">{{ $t('download.downloadSources.china.name') }}</div>
+                <div class="text-sm text-gray-500 dark:text-gray-400">{{ $t('download.downloadSources.china.description') }}</div>
               </div>
               <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -122,8 +127,8 @@
                         : 'border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700'
                     ]">
               <div class="text-left">
-                <div class="font-semibold dark:text-white">GitHub 下载源</div>
-                <div class="text-sm text-gray-500 dark:text-gray-400">推荐海外用户使用</div>
+                <div class="font-semibold dark:text-white">{{ $t('download.downloadSources.github.name') }}</div>
+                <div class="text-sm text-gray-500 dark:text-gray-400">{{ $t('download.downloadSources.github.description') }}</div>
               </div>
               <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
