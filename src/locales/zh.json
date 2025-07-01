@@ -76,7 +76,23 @@
     "detectedSystem": "检测到您的系统",
     "otherVersions": "其他版本",
     "detectedInfo": "检测到当前使用的是 {chip} ，已为您推荐对应版本",
-    "recommended": "推荐版本"
+    "recommended": "推荐版本",
+    "downloadSources": {
+      "title": "下载源选择",
+      "china": {
+        "name": "国内下载源",
+        "description": "推荐大陆用户使用",
+        "recommended": "检测到您在中国大陆地区，已为您优先显示国内下载源"
+      },
+      "github": {
+        "name": "GitHub 下载源",
+        "description": "推荐海外用户使用",
+        "recommended": "检测到您在海外地区，已为您优先显示GitHub下载源"
+      },
+      "detection": {
+        "error": "无法检测您的地区，请选择合适的下载源"
+      }
+    }
   },
   "testimonials": {
     "title": "用户评价",

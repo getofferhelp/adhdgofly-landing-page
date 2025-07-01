@@ -52,7 +52,23 @@
     "detectedSystem": "Detected System",
     "otherVersions": "Other Versions",
     "detectedInfo": "Detected {chip}, recommended version selected",
-    "recommended": "Recommended"
+    "recommended": "Recommended",
+    "downloadSources": {
+      "title": "Download Sources",
+      "china": {
+        "name": "China CDN",
+        "description": "Recommended for users in mainland China",
+        "recommended": "You are accessing from mainland China, China CDN is recommended"
+      },
+      "github": {
+        "name": "GitHub Source",
+        "description": "Recommended for users outside China",
+        "recommended": "You are accessing from outside mainland China, GitHub source is recommended"
+      },
+      "detection": {
+        "error": "Unable to detect your region, please choose a suitable download source"
+      }
+    }
   },
   "testimonials": {
     "title": "User Reviews",
