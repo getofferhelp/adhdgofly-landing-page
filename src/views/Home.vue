@@ -470,14 +470,21 @@ const toggleDark = () => {
   localStorage.setItem('theme', isDark.value ? 'dark' : 'light')
 }
 
-const handleDownload = (arch: 'arm64' | 'x64') => {
-  // 实现下载逻辑
-  const url = arch === 'arm64' 
-    ? 'https://adhdgo1.bolebook.com/releaseADHDGoFly-0.0.1-arm64.dmg'
-    : 'https://adhdgo1.bolebook.com/releaseADHDGoFly-0.0.1-x64.dmg'
+const handleDownload = (arch: 'arm64' | 'x64', source: 'china' | 'github') => {
+  let url: string;
+  
+  if (source === 'china') {
+    url = arch === 'arm64' 
+      ? 'https://adhdgo1.bolebook.com/releaseADHDGoFly-0.0.1-arm64.dmg'
+      : 'https://adhdgo1.bolebook.com/releaseADHDGoFly-0.0.1-x64.dmg'
+  } else {
+    url = arch === 'arm64'
+      ? 'https://github.com/getofferhelp/adhdgofly-landing-page/releases/download/v0.0.1/ADHDGoFly-0.0.1-arm64.dmg'
+      : 'https://github.com/getofferhelp/adhdgofly-landing-page/releases/download/v0.0.1/ADHDGoFly-0.0.1-x64.dmg'
+  }
   
   // 追踪下载事件
-  trackEvent(`download_mac_${arch}`)
+  trackEvent(`download_mac_${arch}_${source}`)
   
   // 开始下载
   window.location.href = url

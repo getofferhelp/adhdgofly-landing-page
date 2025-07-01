@@ -75,7 +75,23 @@
     "detectedSystem": "検出されたシステム",
     "otherVersions": "その他のバージョン",
     "detectedInfo": "{chip}が検出されました。推奨バージョンが選択されています",
-    "recommended": "推奨"
+    "recommended": "推奨",
+    "downloadSources": {
+      "title": "ダウンロードソース",
+      "china": {
+        "name": "中国CDN",
+        "description": "中国本土のユーザーに推奨",
+        "recommended": "中国本土からアクセスしているため、中国CDNを推奨します"
+      },
+      "github": {
+        "name": "GitHubソース",
+        "description": "中国以外のユーザーに推奨",
+        "recommended": "中国本土以外からアクセスしているため、GitHubソースを推奨します"
+      },
+      "detection": {
+        "error": "地域を検出できません。適切なダウンロードソースを選択してください"
+      }
+    }
   },
   "testimonials": {
     "title": "ユーザーレビュー",

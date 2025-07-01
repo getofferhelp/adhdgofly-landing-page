@@ -75,7 +75,23 @@
     "detectedSystem": "Système détecté",
     "otherVersions": "Autres versions",
     "detectedInfo": "{chip} détecté, version recommandée sélectionnée",
-    "recommended": "Recommandé"
+    "recommended": "Recommandé",
+    "downloadSources": {
+      "title": "Sources de Téléchargement",
+      "china": {
+        "name": "CDN Chine",
+        "description": "Recommandé pour les utilisateurs en Chine continentale",
+        "recommended": "Vous accédez depuis la Chine continentale, le CDN Chine est recommandé"
+      },
+      "github": {
+        "name": "Source GitHub",
+        "description": "Recommandé pour les utilisateurs hors de Chine",
+        "recommended": "Vous accédez depuis l'extérieur de la Chine continentale, la source GitHub est recommandée"
+      },
+      "detection": {
+        "error": "Impossible de détecter votre région, veuillez choisir une source de téléchargement appropriée"
+      }
+    }
   },
   "testimonials": {
     "title": "Avis des utilisateurs",
