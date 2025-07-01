@@ -194,8 +194,8 @@ const showDownloadModal = ref(false)
 
 const handleDownload = (arch: 'arm64' | 'x64') => {
   const url = arch === 'arm64' 
-    ? 'https://adhdgofly.online/download/adhdgofly-arm64.dmg'
-    : 'https://adhdgofly.online/download/adhdgofly-x64.dmg'
+    ? 'https://adhdgo1.bolebook.com/releaseADHDGoFly-0.0.1-arm64.dmg'
+    : 'https://adhdgo1.bolebook.com/releaseADHDGoFly-0.0.1-x64.dmg'
   
   window.location.href = url
   showDownloadModal.value = false
