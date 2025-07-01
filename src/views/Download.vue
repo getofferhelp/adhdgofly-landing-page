@@ -192,18 +192,10 @@ import DownloadModal from '@/components/DownloadModal.vue'
 
 const showDownloadModal = ref(false)
 
-const handleDownload = (arch: 'arm64' | 'x64', source: 'china' | 'github') => {
-  let url: string;
-  
-  if (source === 'china') {
-    url = arch === 'arm64' 
-      ? 'https://adhdgo1.bolebook.com/releaseADHDGoFly-0.0.1-arm64.dmg'
-      : 'https://adhdgo1.bolebook.com/releaseADHDGoFly-0.0.1-x64.dmg'
-  } else {
-    url = arch === 'arm64'
-      ? 'https://github.com/getofferhelp/adhdgofly-landing-page/releases/download/v0.0.1/ADHDGoFly-0.0.1-arm64.dmg'
-      : 'https://github.com/getofferhelp/adhdgofly-landing-page/releases/download/v0.0.1/ADHDGoFly-0.0.1-x64.dmg'
-  }
+const handleDownload = (arch: 'arm64' | 'x64') => {
+  const url = arch === 'arm64' 
+    ? 'https://adhdgo1.bolebook.com/releaseADHDGoFly-0.0.1-arm64.dmg'
+    : 'https://adhdgo1.bolebook.com/releaseADHDGoFly-0.0.1-x64.dmg'
   
   window.location.href = url
   showDownloadModal.value = false
